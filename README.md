@@ -1,14 +1,14 @@
-# oracle-12.2-vagrant
-A vagrant box that provisions Oracle Database 12c Release 2 automatically, using Vagrant, the latest Oracle Linux 7 box and a shell script.
+# oracle-18c-vagrant
+A vagrant box that provisions Oracle Database 18c automatically, using Vagrant, the latest Oracle Linux 7 box and shell scripts. 
 
 ## Prerequisites
 1. Install [Oracle VM VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 2. Install [Vagrant](https://vagrantup.com/)
 
 ## Getting started
-1. Clone this repository `git clone https://github.com/totalamateurhour/oracle-12.2-vagrant`
-2. Change into version folder (12.2.0.1)
-3. First time only (see #5): Download the Oracle Database 12c Release 2 binaries linuxx64_12201_database.zip
+1. Clone this repository `git clone https://github.com/dmann99/oracle-18c-vagrant`
+2. Change into version folder (18)
+3. First time only (see #5): Download the Oracle Database 18c binaries LINUX.X64_180000_db_home.zip or V978967-01.zip
 from [http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html)
 4. Run `vagrant up`
 5. The first time you run this it will provision everything and may take a while. Ensure you have a good internet connection!
@@ -24,6 +24,7 @@ from [http://www.oracle.com/technetwork/database/enterprise-edition/downloads/in
 * All passwords are `password`
 
 ## Acknowledgements
+Based on @totalamateurhour's work here: https://github.com/totalamateurhour/oracle12.2-vagrant
 Based on @steveswinsburg's work here: https://github.com/steveswinsburg/oracle12c-vagrant
 
 ## Other info
