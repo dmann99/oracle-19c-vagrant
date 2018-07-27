@@ -7,7 +7,7 @@ cd $ORACLE_HOME
     oracle.install.option=INSTALL_DB_SWONLY                                    \
     ORACLE_HOSTNAME=localhost                                         \
     UNIX_GROUP_NAME=oinstall                                                   \
-    INVENTORY_LOCATION=${ORACLE_HOME}/oraInventory                                        \
+    INVENTORY_LOCATION=/opt/oraInventory                                        \
     SELECTED_LANGUAGES=en,en_GB                                                \
     ORACLE_HOME=${ORACLE_HOME}                                                 \
     ORACLE_BASE=${ORACLE_BASE}                                                 \
