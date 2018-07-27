@@ -49,7 +49,7 @@ echo ''
 
 echo 'INSTALLER: Increasing Swap Space'
 # Extend Swap Space using /dev/sdb supplied with the VM
-sfdisk /dev/sdb < /vagrant/sdb.layout
+sfdisk /dev/sdb < /vagrant/scripts/sdb.layout
 pvcreate /dev/sdb1
 vgextend vg_main /dev/sdb1
 lvextend /dev/vg_main/lv_swap /dev/sdb1
