@@ -4,13 +4,14 @@ A vagrant box that provisions Oracle Database 19 Beta automatically, using Vagra
 ## Prerequisites
 1. Install [Oracle VM VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 2. Install [Vagrant](https://vagrantup.com/)
+3. Install VBox/Vagrant connector: vagrant plugin install vagrant-vbguest
 
 ## Getting started
 1. Clone this repository `git clone https://github.com/dmann99/oracle-19-beta-vagrant`
 2. Change into version folder (19)
 3. First time only (see #5): Download the Oracle Database 19 Beta binaries to this folder. 191000_Beta1_Linux-x86-64_db_home.zip
 4. Run `vagrant up`
-5. The first time you run this it will provision everything and may take a while. Ensure you have a good internet connection!
+5. The first time you run this it will provision everything and may take a while. Ensure you have a good internet connection as the VM image will be downloaded if it is not already locally cached!
 6. Connect to the database.
 7. You can shut down the box via the usual `vagrant halt` and the start it up again via `vagrant up`.
 
