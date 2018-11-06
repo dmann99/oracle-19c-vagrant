@@ -44,30 +44,15 @@ chown oracle:oinstall -R $ORACLE_BASE/oraInventory
 mkdir -p $ORACLE_BASE/oradata
 chown oracle:oinstall -R $ORACLE_BASE/oradata
 #usermod -g dba oracle
-echo ''
-
-
-echo 'INSTALLER: Increasing Swap Space'
-# Extend Swap Space using /dev/sdb supplied with the VM
-sfdisk /dev/sdb < /vagrant/sdb.layout
-pvcreate /dev/sdb1
-vgextend vg_main /dev/sdb1
-lvextend /dev/vg_main/lv_swap /dev/sdb1
-swapoff -v /dev/vg_main/lv_swap
-mkswap /dev/vg_main/lv_swap
-swapon -va
-swapon -s
 
 # Unzip Install Package
 echo 'INSTALLER: Unzip Installation Package'
 su -l oracle -c 'unzip /vagrant/191000*.zip -d ${ORACLE_HOME}'
-echo ''
 
 echo 'INSTALLER: Oracle software install start'
 su -l oracle -c "/vagrant/scripts/go-dbinstall.sh"
 
-
-/opt/oraInventory/orainstRoot.sh
+$ORACLE_BASE/oraInventory/orainstRoot.sh
 $ORACLE_HOME/root.sh
 
 echo 'INSTALLER: Create CDB/PDB Start'
@@ -77,10 +62,7 @@ echo 'INSTALLER: Create CDB/PDB Complete'
 echo 'INSTALLER: Create Listener Start'
 su -l oracle -c "netca -silent -responseFile /vagrant/ora-response/netca_typ.rsp"
 echo 'INSTALLER: Create Listener Complete'
-echo ''
-
 
 echo 'INSTALLER: Installation complete, check for errors, database should be ready to use!'
 echo Start Time  : $STARTDATE
 echo Finish Time : `date`
-
