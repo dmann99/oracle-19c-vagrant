@@ -67,7 +67,7 @@ echo 'INSTALLER: Oracle software install start'
 su -l oracle -c "/vagrant/scripts/go-dbinstall.sh"
 
 
-$ORACLE_HOME/oraInventory/orainstRoot.sh
+/opt/oraInventory/orainstRoot.sh
 $ORACLE_HOME/root.sh
 
 echo 'INSTALLER: Create CDB/PDB Start'
