@@ -47,7 +47,7 @@ chown oracle:oinstall -R $ORACLE_BASE/oradata
 
 # Unzip Install Package
 echo 'INSTALLER: Unzip Installation Package'
-su -l oracle -c 'unzip /vagrant/191000*.zip -d ${ORACLE_HOME}'
+su -l oracle -c 'unzip /vagrant/19*.zip -d ${ORACLE_HOME}'
 
 echo 'INSTALLER: Oracle software install start'
 su -l oracle -c "/vagrant/scripts/go-dbinstall.sh"
