@@ -21,7 +21,7 @@ echo ''
 # install Oracle Database prereq packages
 echo 'INSTALLER: Oracle preinstall started...'
 yum install dejavu-serif-fonts
-yum install -y oracle-database-preinstall-18c
+yum install -y oracle-database-preinstall-19c
 echo 'INSTALLER: Oracle preinstall complete'
 echo ''
 
