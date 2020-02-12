@@ -13,19 +13,21 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # change memory size
   config.vm.provider "virtualbox" do |v|
     v.memory = 10240
-    v.name = "oracle19beta-vagrant"
+    v.name = "oracle19c-vagrant"
   end
 
   # Oracle port forwarding
   config.vm.network "forwarded_port", guest: 1521, host: 1521
   config.vm.network "forwarded_port", guest: 5500, host: 5500
+  config.vm.network "forwarded_port", guest: 8080, host: 8080
+  config.vm.network "forwarded_port", guest: 8443, host: 8443
   config.vm.network "private_network", ip: "192.168.56.10"
 
   # Provision everything on the first run
   config.vm.provision "shell", path: "scripts/install.sh", env:
     {
        "ORACLE_BASE"         => "/opt/oracle",
-       "ORACLE_HOME"         => "/opt/oracle/product/19.0.0/dbhome_1",
+       "ORACLE_HOME"         => "/opt/oracle/product/19.3.0/dbhome_1",
        "ORACLE_SID"          => "ORCLCDB",
        "ORACLE_PDB"          => "ORCLPDB1",
        "ORACLE_CHARACTERSET" => "AL32UTF8",
