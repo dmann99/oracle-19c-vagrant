@@ -32,7 +32,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
        "ORACLE_PDB"          => "ORCLPDB1",
        "ORACLE_CHARACTERSET" => "AL32UTF8",
        "ORACLE_DATADIR"      => "/opt/oracle/oradata",
-       "ORACLE_INVENTORY"    => "/opt/oracle/oraInventory"
+       "ORACLE_INVENTORY"    => "/opt/oraInventory"
     }
 
 end
