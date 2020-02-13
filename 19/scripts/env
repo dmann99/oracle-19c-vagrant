@@ -3,3 +3,4 @@ export ORACLE_HOME=/opt/oracle/product/19.3.0/dbhome_1
 export ORACLE_SID=ORCLCDB
 export ORACLE_PDB=ORCLPDB1
 export ORACLE_CHARACTERSET=AL32UTF8
+export ORACLE_INVENTORY=/opt/oraInventory
